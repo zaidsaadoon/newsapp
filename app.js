@@ -27,19 +27,21 @@ function updateUI(content) {
   news.innerHTML = content
 }
 
-var displayDate= document.getElementById("upvote").addEventListener("click", displayDate);
-//var para=document.getElementById("paragraph");
-var para =article.counter; 
+var displayData= document.getElementById("upVote").addEventListener("click", displayDate);
+var para=document.getElementById("counter");
 var x=0;
 function displayDate(){
    
+    x ++;
     para.innerHTML=x;
     
 
 }
 
 
-var displayData2=document.getElementById("downvote").addEventListener("click",displayData2);
+
+
+var displayData2=document.getElementById("downVote").addEventListener("click",displayData2);
     function displayData2(){
     
         if (x!=0){
@@ -62,9 +64,9 @@ function createArticle(article, i) {
         <time>${article.publishedAt}</time>
       </div>
       <div id="voter">
-        <img id= ${upvote} height="13px" src="${require('./assets/upvote.svg')}" alt="">
+        <img height="13px" src="${require('./assets/upvote.svg')}" alt="">
         <div id="counter${i}">${article.counter}</div>
-        <img  id=${downvote} height="13px" src="${require('./assets/downvote.svg')}" alt="">
+        <img   height="13px" src="${require('./assets/downvote.svg')}" alt="">
       </div>
     </article>
   `
